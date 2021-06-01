@@ -1,0 +1,33 @@
+//operator_overloading_mul
+using System;
+					
+public class Mul
+{
+	public int num1,num2;
+	public Mul(int num1,int num2)
+	{
+		this.num1=num1;
+		this.num2=num2;
+	}
+	public static Mul operator *(Mul s1,Mul s2)
+	{
+		Mul s3=new Mul(0,0);
+		s3.num1=s1.num1*s2.num1;
+		s3.num2=s1.num2*s2.num2;
+		return s3;
+	}
+}
+public class Class1
+{
+	public static void Main()
+	{
+		Mul s1=new Mul(1,2);
+		Mul s2=new Mul(2,2);
+		Mul s3=new Mul(0,0);
+		Console.WriteLine("values before mul num1:" +s3.num1+"num2:" +s3.num2);
+		s3=s1*s2;
+		Console.WriteLine("values after mul num1:" +s3.num1+"num2:" +s3.num2);
+		Console.ReadLine();
+		
+	}
+}

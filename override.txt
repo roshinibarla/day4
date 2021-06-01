@@ -1,0 +1,40 @@
+//override_baseclass
+using System;
+					
+public class baseClass
+{
+	public virtual void Print()
+	{
+		Console.WriteLine("hi i am in base class");
+	}
+	
+}
+public class derivedClass:baseClass
+{
+
+ public override void Print()
+      {
+	  base.Print();
+       Console.WriteLine("hi i am in derieved class");
+      }
+}
+public class Class2
+{
+	public static void Main()
+	{
+       // derivedClass derivedClass=new derivedClass();
+	   //derivedClass.Print();
+		
+		//baseClass b= new derivedClass();
+		//b.Print();
+		
+		//baseClass baseClass =new baseClass();
+		//baseClass.Print();
+		
+		//baseClass =new derivedClass();
+		//baseClass.Print();
+		derivedClass d= new derivedClass();
+		d.Print();
+		Console.ReadLine();
+	}
+}

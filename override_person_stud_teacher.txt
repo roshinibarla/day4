@@ -1,0 +1,60 @@
+//override_person_stud_teacher
+using System;
+namespace Day_4
+{
+    public class Person
+    {
+        public string name;
+		
+        public Person(string name)  
+        {
+           this.name= name;
+        }
+        public override string ToString()
+		{
+			return("hello my name is"+" " +name);
+		}
+		~Person()
+		{
+			name=string.Empty;
+		}
+	}
+	public class Teacher : Person
+	{
+	   public Teacher(string name) : base(name)
+	   {
+	   name=name;
+	   }
+	   public void Explain()
+	   {
+	   Console.WriteLine("the teacher"+" " +name+" "+"is Explaining");
+	}
+	public class Student: Person
+	{
+	public Student(string name) : base (name)
+	{
+	name=name;
+	}
+	public void Study()
+	{
+	Console.WriteLine( "the student" +" "+name+" "+"Studying");
+	}
+	}
+	
+      public static void Main(string[] args)
+	  {
+		  Student s1=new Student("shivani");
+		  s1.Study();
+		  Teacher t1=new Teacher("neha");
+		  t1.Explain();
+		  Person p1=new Person("person");
+		  Console.WriteLine(p1.ToString());
+		  Console.ReadLine();
+		 }
+ }
+		  
+}	  
+    
+    
+
+ 

@@ -1,0 +1,34 @@
+//overloading_polymorphism
+using System;
+					
+public class Program
+{
+	int a=6,b=7;
+	public void Sum()
+	{
+		Console.WriteLine("sum is:" +(a+b));
+	}
+	public void Sum(int a, int b)
+	{
+		Console.WriteLine("sum is:" +(a+b));
+	}
+	public int Sum(int a, int b, int c)
+	{
+		return (a+b+c);
+	}
+	public void Sum(string a, string b)
+	{
+		Console.WriteLine("sum is:" +(Convert.ToInt32(a))+(Convert.ToInt32(b)));
+	}
+	
+	
+	public static void Main(string [] args)
+	{
+		Program p=new Program();	
+		p.Sum();
+		p.Sum(1,2);
+		p.Sum(1, 2, 3);
+		p.Sum("1","2");
+		Console.ReadLine();
+	}
+}

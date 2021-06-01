@@ -1,0 +1,33 @@
+//operator_overloading_sum
+using System;
+					
+public class Sum
+{
+	public int num1,num2;
+	public Sum(int num1,int num2)
+	{
+		this.num1=num1;
+		this.num2=num2;
+	}
+	public static Sum operator +(Sum s1,Sum s2)
+	{
+		Sum s3=new Sum(0,0);
+		s3.num1=s1.num1+s2.num1;
+		s3.num2=s1.num2+s2.num2;
+		return s3;
+	}
+}
+public class Class1
+{
+	public static void Main()
+	{
+		Sum s1=new Sum(1,2);
+		Sum s2=new Sum(2,2);
+		Sum s3=new Sum(0,0);
+		Console.WriteLine("values before sum num1:" +s3.num1+"num2:" +s3.num2);
+		s3=s1+s2;
+		Console.WriteLine("values after sum num1:" +s3.num1+"num2:" +s3.num2);
+		Console.ReadLine();
+		
+	}
+}

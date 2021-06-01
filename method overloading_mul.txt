@@ -1,0 +1,34 @@
+//overloading_polymorphism_multiplication
+using System;
+					
+public class Program
+{
+	int a=6,b=7,c=5;
+	public void Mul()
+	{
+		Console.WriteLine("mul is:" +(a*b));
+	}
+	public void Mul(int a, int b)
+	{
+		Console.WriteLine("mul is:" +(a*b));
+	}
+	public int Mul(int a, int b, int c)
+	{
+		return (a*b*c);
+	}
+	public void Mul(string a, string b)
+	{
+		Console.WriteLine("mul is:" +(Convert.ToInt32(a))+(Convert.ToInt32(b)));
+	}
+	
+	
+	public static void Main(string [] args)
+	{
+		Program p=new Program();	
+		p.Mul();
+		p.Mul(1,2);
+		p.Mul(1, 2, 3);
+		p.Mul("1","2");
+		Console.ReadLine();
+	}
+}
